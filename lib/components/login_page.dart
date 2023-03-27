@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:login_signup/components/common/custom_input_field.dart';
 import 'package:login_signup/components/common/page_header.dart';
 import 'package:login_signup/components/forget_password_page.dart';
+import 'package:login_signup/components/homepage.dart';
 import 'package:login_signup/components/signup_page.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:login_signup/components/common/page_heading.dart';
@@ -86,7 +87,11 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                           const SizedBox(height: 20,),
-                          CustomFormButton(innerText: 'Login', onPressed: _handleLoginUser,),
+                          CustomFormButton(innerText: 'Login', onPressed: (){
+                            Navigator.push(
+                              context,MaterialPageRoute(builder: (context) => HomePage())
+                            );
+                          },),
                           const SizedBox(height: 18,),
                           SizedBox(
                             width: size.width * 0.8,

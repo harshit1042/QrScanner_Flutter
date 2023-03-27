@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_signup/components/history.dart';
 import 'package:login_signup/components/login_page.dart';
 
 void main() {
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
         home: LoginPage(),
+      // home: History(),
     );
   }
 }
